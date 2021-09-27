@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color:AliceBlue;
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: white;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: AliceBlue;
+  /* font-color: Black; */
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Vendor List</h2>
+<p style="text-align: right;"> Welcome {user}</p>
+
+<header>
+<div class="img-container"> <!-- Block parent element -->
+      <img src="pic_trulli.jpg" alt="Italian Trulli" width="800" height="300" >
+</div>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li style="padding-bottom:1em"><a href="#">Just like Home Tiffin Service</a></li>
+      <li style="padding-bottom:1em"><a href="#">BharPet Khana</a></li>
+      <li style="padding-bottom:1em"><a href="#">Dadi ki daal Tiffins</a></li>
+      <li style="padding-bottom:1em"><a href="#">Mr.Tiffins</a></li>
+      <li style="padding-bottom:1em"><a href="#">Tiffin ho to Aisa</a></li>
+      <li style="padding-bottom:1em"><a href="#">Punjabi Khana</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+
+  </article>
+</section>
+
+<footer style="color: black;">
+<h2 style="text-align: left;"> Tiffin Seva</h2>
+<p> For any query or complain please contact us at +91 7777755447.</p>
+<hr>
+<p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2021 © TiffinSeva™ Ltd. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
